@@ -1,0 +1,24 @@
+﻿@model List<NetCoreMoviesTheatersProject.Model.Entities.Category>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Kategori Adı</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var category in Model)
+        {
+            <tr>
+                <td>@category.Id</td>
+                <td>@category.CategoryName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
